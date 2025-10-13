@@ -1,0 +1,8 @@
+stages:
+  train:
+    cmd: python .\src\training\train.py
+    deps:
+    - .\data\telco.csv
+    - .\src\training\train.py
+    outs:
+    - .\models\random_forest.pkl
