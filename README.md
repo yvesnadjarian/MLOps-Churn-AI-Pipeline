@@ -86,7 +86,7 @@ This project uses **local storage** for DVC, ensuring reproducibility without re
 
 ```bash
 # 1. **Clone the repository** 
-   git clone https://github.com/<your-username>/churn-mlops.git
+   git clone https://github.com/yvesnadjarian/MLOps-Churn-AI-Pipeline.git
    cd churn-mlops
 
 #2. **Create and activate a virtual environment**
