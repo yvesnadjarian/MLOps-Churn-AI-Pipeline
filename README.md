@@ -19,6 +19,7 @@ The project focuses on building a complete, reproducible **machine learning work
 
 ## 🧱 Project Structure
 
+```bash
 churn-mlops/
 │
 ├── data/ # Raw and processed datasets (tracked by DVC)
@@ -37,6 +38,7 @@ churn-mlops/
 │
 ├── requirements.txt # Python dependencies
 └── README.md # This file
+```
 
 ---
 
@@ -69,18 +71,6 @@ The project’s workflow is automated with **DVC** and organized into three main
 
 ---
 
-## 🧩 Local DVC Setup
-
-This project uses **local storage** for DVC, ensuring reproducibility without relying on external cloud services.
-
-To rebuild the entire pipeline automatically:
-
-```bash
-dvc repro
-```
-
----
-
 🚀 Next Steps
 
 Add logging and performance tracking
@@ -88,11 +78,9 @@ Build a simple prediction interface for new customers
 
 ---
 
-📚 Dataset
+## 🧩 Local DVC Setup
 
-Source: Telco Customer Churn - Kaggle
-
----
+This project uses **local storage** for DVC, ensuring reproducibility without relying on external cloud services.
 
 ## 🧠 How to Run Locally
 
