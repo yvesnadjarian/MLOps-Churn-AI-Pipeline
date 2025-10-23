@@ -1,8 +1,25 @@
 stages:
-  train:
-    cmd: python .\src\training\train.py
+  preprocess:
+    cmd: python .\src\evaluate.py
     deps:
-    - .\data\telco.csv
-    - .\src\training\train.py
+    - .\data\raw\telco.csv
+    - .\src\evaluate.py
+    outs:
+    - .\data\processed\telco_processed.csv
+
+  train:
+    cmd: python .\src\train.py
+    deps:
+    - .\data\processed\telco_processed.csv
+    - .\src\train.py
     outs:
     - .\models\random_forest.pkl
+    - .\models\test_split.pkl
+
+  evaluate:
+    cmd: python .\src\evaluate.py
+    deps:
+    - .\models\random_forest.pkl
+    - .\models\test_split.pkl
+    - .\src\evaluate.py
+    
